@@ -3,77 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Play Flappy Bird online for free on PokiPlayOnline - Experience the classic arcade game with modern graphics and smooth gameplay!">
-    <title>PokiPlayOnline - Play Flappy Bird Online Free Game</title>
+    <meta name="description" content="PokiPlayOnline - Your ultimate destination for free online games. Play the best HTML5 games with stunning graphics and smooth gameplay!">
+    <title>PokiPlayOnline - Free Online Games Portal</title>
     <link rel="canonical" href="https://pokiplayonline.online">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap');
         body {
             font-family: 'Inter', sans-serif;
         }
+        .tech-font {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .game-card {
+            transition: all 0.3s ease;
+        }
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        .tech-gradient {
+            background: linear-gradient(135deg, #007AFF, #5856D6);
+        }
     </style>
 </head>
-<body class="bg-gray-50">
-    <header class="bg-white shadow-sm">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<body class="bg-gray-900 text-white">
+    <header class="tech-gradient shadow-lg">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div class="flex justify-between items-center">
-                <h1 class="text-3xl font-bold text-[#007AFF]">PokiPlayOnline</h1>
+                <h1 class="text-4xl font-bold tech-font animate__animated animate__fadeIn">PokiPlayOnline</h1>
             </div>
         </nav>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <section class="mb-12">
-            <p class="text-xl text-gray-700 mb-6">Experience the classic Flappy Bird game reimagined - Test your reflexes and timing in this addictive arcade challenge!</p>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <section class="mb-16 text-center">
+            <h2 class="text-3xl tech-font mb-6 animate__animated animate__fadeIn">Welcome to the Future of Gaming</h2>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto animate__animated animate__fadeIn animate__delay-1s">Experience our collection of hand-picked HTML5 games with stunning graphics and smooth gameplay. No downloads required - play instantly in your browser!</p>
         </section>
 
-        <section class="mb-12">
-            <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg">
-                <iframe 
-                    src="https://playcanv.as/p/2OlkUaxF/" 
-                    class="w-full h-[600px] border-0"
-                    allow="gamepad *;"
-                    allowfullscreen>
-                </iframe>
-            </div>
-        </section>
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Game Cards -->
+            <a href="games/flappy-bird.html" class="game-card bg-gray-800 rounded-xl overflow-hidden">
+                <img src="https://placehold.co/600x400/007AFF/ffffff?text=Flappy+Bird" alt="Flappy Bird" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 tech-font">Flappy Bird</h3>
+                    <p class="text-gray-400">Test your reflexes in this classic arcade challenge!</p>
+                </div>
+            </a>
 
-        <section class="grid md:grid-cols-2 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow">
-                <h2 class="text-2xl font-semibold text-[#FF9500] mb-4">Game Features</h2>
-                <ul class="space-y-3 text-gray-600">
-                    <li>✨ Classic arcade gameplay</li>
-                    <li>🎮 Simple one-tap controls</li>
-                    <li>🏆 Real-time score tracking</li>
-                    <li>🎯 Endless challenge</li>
-                </ul>
-            </div>
+            <a href="games/2048.html" class="game-card bg-gray-800 rounded-xl overflow-hidden">
+                <img src="https://placehold.co/600x400/5856D6/ffffff?text=2048" alt="2048" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 tech-font">2048</h3>
+                    <p class="text-gray-400">Challenge your mind with this addictive puzzle game!</p>
+                </div>
+            </a>
 
-            <div class="bg-white p-6 rounded-lg shadow">
-                <h2 class="text-2xl font-semibold text-[#34C759] mb-4">How to Play</h2>
-                <ul class="space-y-3 text-gray-600">
-                    <li>1. Click or tap to flap</li>
-                    <li>2. Avoid the pipes</li>
-                    <li>3. Time your jumps carefully</li>
-                    <li>4. Beat your high score</li>
-                </ul>
-            </div>
-        </section>
+            <a href="games/snake.html" class="game-card bg-gray-800 rounded-xl overflow-hidden">
+                <img src="https://placehold.co/600x400/34C759/ffffff?text=Snake" alt="Snake" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 tech-font">Snake</h3>
+                    <p class="text-gray-400">The classic snake game with a modern twist!</p>
+                </div>
+            </a>
 
-        <section class="mt-12">
-            <h2 class="text-2xl font-semibold text-[#5856D6] mb-6">Game Description</h2>
-            <div class="prose max-w-none text-gray-700">
-                <p class="mb-4">Flappy Bird is the iconic arcade game that took the world by storm. Guide your bird through a series of pipes by timing your taps perfectly. With its simple yet challenging gameplay mechanics, this game proves that the best experiences often come in the simplest packages.</p>
-                <p>Perfect for quick gaming sessions but engaging enough for extended play, Flappy Bird offers that "just one more try" appeal that keeps players coming back. Can you master the perfect rhythm and achieve a new high score?</p>
-            </div>
+            <a href="games/tetris.html" class="game-card bg-gray-800 rounded-xl overflow-hidden">
+                <img src="https://placehold.co/600x400/FF9500/ffffff?text=Tetris" alt="Tetris" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 tech-font">Tetris</h3>
+                    <p class="text-gray-400">The ultimate block-stacking challenge!</p>
+                </div>
+            </a>
+
+            <a href="games/pacman.html" class="game-card bg-gray-800 rounded-xl overflow-hidden">
+                <img src="https://placehold.co/600x400/FF2D55/ffffff?text=Pacman" alt="Pacman" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 tech-font">Pacman</h3>
+                    <p class="text-gray-400">Navigate through mazes in this arcade classic!</p>
+                </div>
+            </a>
+
+            <a href="games/breakout.html" class="game-card bg-gray-800 rounded-xl overflow-hidden">
+                <img src="https://placehold.co/600x400/5AC8FA/ffffff?text=Breakout" alt="Breakout" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 tech-font">Breakout</h3>
+                    <p class="text-gray-400">Break all the blocks in this arcade favorite!</p>
+                </div>
+            </a>
+
+            <a href="games/minesweeper.html" class="game-card bg-gray-800 rounded-xl overflow-hidden">
+                <img src="https://placehold.co/600x400/AF52DE/ffffff?text=Minesweeper" alt="Minesweeper" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 tech-font">Minesweeper</h3>
+                    <p class="text-gray-400">Test your logic in this classic puzzle game!</p>
+                </div>
+            </a>
+
+            <a href="games/chess.html" class="game-card bg-gray-800 rounded-xl overflow-hidden">
+                <img src="https://placehold.co/600x400/4CD964/ffffff?text=Chess" alt="Chess" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 tech-font">Chess</h3>
+                    <p class="text-gray-400">Challenge yourself in the game of kings!</p>
+                </div>
+            </a>
+
+            <a href="games/racing.html" class="game-card bg-gray-800 rounded-xl overflow-hidden">
+                <img src="https://placehold.co/600x400/FF3B30/ffffff?text=Racing" alt="Racing" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 tech-font">Racing</h3>
+                    <p class="text-gray-400">Experience high-speed racing action!</p>
+                </div>
+            </a>
         </section>
     </main>
 
-    <footer class="bg-white mt-12 border-t border-gray-200">
+    <footer class="bg-gray-800 mt-12 border-t border-gray-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <p class="text-center text-gray-500">&copy; 2024 PokiPlayOnline. All rights reserved.</p>
+            <p class="text-center text-gray-400">&copy; 2024 PokiPlayOnline. All rights reserved.</p>
         </div>
     </footer>
 </body>
-</html>
+</html> 
