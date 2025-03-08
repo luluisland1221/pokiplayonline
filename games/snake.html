@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Play Snake online for free! Guide your snake, collect food, and grow longer in this classic arcade game. Challenge yourself with increasing difficulty!">
+    <meta name="keywords" content="snake game, play snake online, classic snake, arcade game, free online games">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Play Snake Online - Classic Arcade Game | PokiPlayOnline">
+    <meta property="og:description" content="Guide your snake to victory in this timeless classic! Collect food, grow longer, and challenge yourself. Play for free in your browser!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pokiplayonline.online/games/snake">
+    <title>Play Snake Online - Classic Arcade Game | PokiPlayOnline</title>
+    <link rel="canonical" href="https://pokiplayonline.online/games/snake">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .tech-font {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .tech-gradient {
+            background: linear-gradient(135deg, #34C759, #30D158);
+        }
+        .game-container {
+            aspect-ratio: 16/9;
+            max-height: 80vh;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <header class="tech-gradient shadow-lg">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="text-4xl font-bold tech-font">PokiPlayOnline</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <section class="mb-8">
+            <h1 class="text-3xl tech-font mb-4">Snake - The Classic Arcade Game</h1>
+            <p class="text-xl text-gray-300 mb-4">Guide your snake through the arena, collect food, and grow longer! But be careful not to crash into walls or yourself.</p>
+            <div class="text-gray-400">
+                <p class="mb-2">🎮 Classic arcade gameplay</p>
+                <p class="mb-2">🏆 Compete for high scores</p>
+                <p class="mb-2">⚡ Progressive difficulty</p>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <div class="game-container rounded-lg overflow-hidden shadow-lg">
+                <iframe 
+                    src="https://playsnake.org/"
+                    class="w-full h-full border-0"
+                    allow="gamepad *;"
+                    loading="lazy"
+                    title="Play Snake Game Online"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <section class="grid md:grid-cols-2 gap-8">
+            <div class="bg-gray-800 p-6 rounded-xl">
+                <h2 class="text-2xl font-semibold tech-font mb-4 text-[#FF9500]">Game Features</h2>
+                <ul class="space-y-3 text-gray-300">
+                    <li>✨ Smooth controls</li>
+                    <li>🎮 Arrow key navigation</li>
+                    <li>🏆 Score tracking</li>
+                    <li>🎯 Multiple food types</li>
+                    <li>📱 Mobile friendly</li>
+                    <li>🌟 Instant play</li>
+                </ul>
+            </div>
+
+            <div class="bg-gray-800 p-6 rounded-xl">
+                <h2 class="text-2xl font-semibold tech-font mb-4 text-[#34C759]">How to Play</h2>
+                <ul class="space-y-3 text-gray-300">
+                    <li>1. Use arrow keys to control direction</li>
+                    <li>2. Collect food to grow longer</li>
+                    <li>3. Avoid hitting walls</li>
+                    <li>4. Don't crash into yourself</li>
+                    <li>5. Longer snake = higher score</li>
+                    <li>6. Try different strategies</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 mt-12 border-t border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <p class="text-center text-gray-400">&copy; 2024 PokiPlayOnline. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
