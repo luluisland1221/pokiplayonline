@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Play Flappy Bird online for free! Test your reflexes in this addictive arcade game. Navigate through pipes and set new high scores. No downloads required!">
+    <meta name="keywords" content="flappy bird, play flappy bird online, flappy bird game, arcade game, free online games">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Play Flappy Bird Online - Free Arcade Game | PokiPlayOnline">
+    <meta property="og:description" content="Test your reflexes in Flappy Bird! Navigate through pipes and challenge yourself in this addictive arcade game. Play for free in your browser!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pokiplayonline.online/games/flappy-bird">
+    <title>Play Flappy Bird Online - Free Arcade Game | PokiPlayOnline</title>
+    <link rel="canonical" href="https://pokiplayonline.online/games/flappy-bird">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .tech-font {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .tech-gradient {
+            background: linear-gradient(135deg, #007AFF, #5856D6);
+        }
+        .game-container {
+            aspect-ratio: 16/9;
+            max-height: 80vh;
+        }
+        /* 添加游戏容器样式 */
+        .game-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: #000;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <header class="tech-gradient shadow-lg">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="text-4xl font-bold tech-font">PokiPlayOnline</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <section class="mb-8">
+            <h1 class="text-3xl tech-font mb-4">Flappy Bird - The Classic Arcade Challenge</h1>
+            <p class="text-xl text-gray-300 mb-4">Test your reflexes in this addictive arcade game! Navigate your bird through pipes and aim for the highest score.</p>
+            <div class="text-gray-400">
+                <p class="mb-2">🎮 Perfect for quick gaming sessions</p>
+                <p class="mb-2">🏆 Challenge yourself to beat high scores</p>
+                <p class="mb-2">⚡ Simple controls, intense gameplay</p>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <div class="game-container rounded-lg overflow-hidden shadow-lg">
+                <!-- 使用 iframe 加载本地游戏 -->
+                <iframe 
+                    src="flappy-bird/index.html"
+                    class="game-frame"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <!-- 其他内容保持不变 -->
+        <section class="grid md:grid-cols-2 gap-8">
+            <!-- Game Features 部分 -->
+            <!-- How to Play 部分 -->
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 mt-12 border-t border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <p class="text-center text-gray-400">&copy; 2024 PokiPlayOnline. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
