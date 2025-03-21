@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Play Pac-Man online for free! Experience the classic arcade game that defined a generation. Navigate through mazes, eat dots, and avoid ghosts in this timeless adventure.">
+    <meta name="keywords" content="Pac-Man, play Pac-Man online, Pacman game, arcade game, maze game, classic games, free online games">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Play Pac-Man Online - Classic Arcade Game | PokiPlayOnline">
+    <meta property="og:description" content="Guide Pac-Man through mazes while eating dots and avoiding ghosts! Experience the classic arcade game that started it all.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pokiplayonline.online/games/pacman">
+    <title>Play Pac-Man Online - Classic Arcade Game | PokiPlayOnline</title>
+    <link rel="canonical" href="https://pokiplayonline.online/games/pacman">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .tech-font {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .tech-gradient {
+            background: linear-gradient(135deg, #5856D6, #AF52DE);
+        }
+        .game-container {
+            aspect-ratio: 16/9;
+            max-height: 80vh;
+        }
+        .game-frame {
+            width: 100%;
+            height: 100%;
+            background: #000;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <header class="tech-gradient shadow-lg">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="text-4xl font-bold tech-font">PokiPlayOnline</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <section class="mb-8">
+            <h1 class="text-3xl tech-font mb-4">Pac-Man - The Arcade Legend</h1>
+            <p class="text-xl text-gray-300 mb-4">Experience the timeless classic that revolutionized gaming! Guide Pac-Man through mazes, eat dots, and avoid ghosts in this iconic arcade adventure. Can you achieve the highest score?</p>
+            <div class="text-gray-400">
+                <p class="mb-2">🎮 Classic arcade action</p>
+                <p class="mb-2">🏆 Chase high scores</p>
+                <p class="mb-2">⚡ Power pellets and ghost hunting</p>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <div class="game-container rounded-lg overflow-hidden shadow-lg">
+                <iframe 
+                    src="pacman/index.html"
+                    class="w-full h-full border-0 game-frame"
+                    allow="gamepad *;"
+                    loading="lazy"
+                    title="Play Pac-Man Online"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <section class="grid md:grid-cols-2 gap-8">
+            <div class="bg-gray-800 p-6 rounded-xl">
+                <h2 class="text-2xl font-semibold tech-font mb-4 text-[#FF9500]">Game Features</h2>
+                <ul class="space-y-3 text-gray-300">
+                    <li>✨ Classic Pac-Man gameplay</li>
+                    <li>🎮 Simple arrow key controls</li>
+                    <li>🏆 Score tracking system</li>
+                    <li>🌟 Power pellets and ghost mechanics</li>
+                    <li>📱 Responsive design - play on any device</li>
+                    <li>🎯 Multiple mazes and levels</li>
+                </ul>
+            </div>
+
+            <div class="bg-gray-800 p-6 rounded-xl">
+                <h2 class="text-2xl font-semibold tech-font mb-4 text-[#34C759]">How to Play</h2>
+                <ul class="space-y-3 text-gray-300">
+                    <li>1. Use arrow keys to move Pac-Man</li>
+                    <li>2. Eat all dots to complete levels</li>
+                    <li>3. Avoid ghosts unless powered up</li>
+                    <li>4. Collect power pellets to hunt ghosts</li>
+                    <li>5. Eat fruit for bonus points</li>
+                    <li>6. Clear the maze to advance</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 mt-12 border-t border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <p class="text-center text-gray-400">&copy; 2024 PokiPlayOnline. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 
