@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Play Flappy Bird online for free! Test your reflexes in this addictive arcade game. Navigate through pipes and set new high scores. No downloads required!">
-    <meta name="keywords" content="flappy bird, play flappy bird online, flappy bird game, arcade game, free online games">
+    <meta name="description" content="Play Flappy Bird online for free! Navigate through pipes in this addictive arcade game. Test your reflexes and timing skills. No downloads required!">
+    <meta name="keywords" content="Flappy Bird, play Flappy Bird online, Flappy Bird game, arcade game, skill game, timing game, free online games">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Play Flappy Bird Online - Free Arcade Game | PokiPlayOnline">
-    <meta property="og:description" content="Test your reflexes in Flappy Bird! Navigate through pipes and challenge yourself in this addictive arcade game. Play for free in your browser!">
+    <meta property="og:description" content="Test your skills with Flappy Bird, the addictive arcade game! Navigate through pipes, time your taps perfectly, and aim for the high score. Play for free in your browser!">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pokiplayonline.online/games/flappy-bird">
     <title>Play Flappy Bird Online - Free Arcade Game | PokiPlayOnline</title>
@@ -22,7 +22,7 @@
             font-family: 'Orbitron', sans-serif;
         }
         .tech-gradient {
-            background: linear-gradient(135deg, #007AFF, #5856D6);
+            background: linear-gradient(135deg, #5856D6, #AF52DE);
         }
         .game-container {
             aspect-ratio: 16/9;
@@ -49,29 +49,51 @@
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <section class="mb-8">
             <h1 class="text-3xl tech-font mb-4">Flappy Bird - The Classic Arcade Challenge</h1>
-            <p class="text-xl text-gray-300 mb-4">Test your reflexes in this addictive arcade game! Navigate your bird through pipes and aim for the highest score.</p>
+            <p class="text-xl text-gray-300 mb-4">Test your reflexes in this iconic arcade game! Guide your bird through a series of pipes with precise timing and steady nerves. How far can you fly?</p>
             <div class="text-gray-400">
                 <p class="mb-2">🎮 Perfect for quick gaming sessions</p>
-                <p class="mb-2">🏆 Challenge yourself to beat high scores</p>
-                <p class="mb-2">⚡ Simple controls, intense gameplay</p>
+                <p class="mb-2">🏆 Challenge yourself to beat your high score</p>
+                <p class="mb-2">⚡ Simple controls, addictive gameplay</p>
             </div>
         </section>
 
         <section class="mb-12">
             <div class="game-container rounded-lg overflow-hidden shadow-lg">
-                <!-- 使用 iframe 加载本地游戏 -->
                 <iframe 
                     src="flappy-bird/index.html"
-                    class="game-frame"
+                    class="w-full h-full border-0"
+                    allow="gamepad *;"
+                    loading="lazy"
+                    title="Play Flappy Bird Online"
                     allowfullscreen>
                 </iframe>
             </div>
         </section>
 
-        <!-- 其他内容保持不变 -->
         <section class="grid md:grid-cols-2 gap-8">
-            <!-- Game Features 部分 -->
-            <!-- How to Play 部分 -->
+            <div class="bg-gray-800 p-6 rounded-xl">
+                <h2 class="text-2xl font-semibold tech-font mb-4 text-[#FF9500]">Game Features</h2>
+                <ul class="space-y-3 text-gray-300">
+                    <li>✨ Classic retro-style graphics and animations</li>
+                    <li>🎮 Simple one-button controls for easy play</li>
+                    <li>🏆 Real-time score tracking</li>
+                    <li>🌟 Addictive "just one more try" gameplay</li>
+                    <li>📱 Responsive design - play on any device</li>
+                    <li>🎯 Instant play - no registration needed</li>
+                </ul>
+            </div>
+
+            <div class="bg-gray-800 p-6 rounded-xl">
+                <h2 class="text-2xl font-semibold tech-font mb-4 text-[#34C759]">How to Play</h2>
+                <ul class="space-y-3 text-gray-300">
+                    <li>1. Click or tap to make your bird flap its wings</li>
+                    <li>2. Time your flaps to navigate between pipes</li>
+                    <li>3. Each pipe you pass adds to your score</li>
+                    <li>4. Avoid hitting pipes and the ground</li>
+                    <li>5. Try to maintain steady rhythm</li>
+                    <li>6. Keep playing to improve your high score</li>
+                </ul>
+            </div>
         </section>
     </main>
 
