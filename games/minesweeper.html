@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Play Minesweeper online for free! Experience the classic puzzle game that challenges your logic and deduction skills. Clear the minefield without triggering any bombs!">
+    <meta name="keywords" content="Minesweeper, play Minesweeper online, Minesweeper game, puzzle game, logic game, classic games, free online games">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Play Minesweeper Online - Classic Puzzle Game | PokiPlayOnline">
+    <meta property="og:description" content="Test your logic skills with Minesweeper! Clear the field of mines using strategy and careful planning. Play for free in your browser!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pokiplayonline.online/games/minesweeper">
+    <title>Play Minesweeper Online - Classic Puzzle Game | PokiPlayOnline</title>
+    <link rel="canonical" href="https://pokiplayonline.online/games/minesweeper">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XVEPP70PSZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-XVEPP70PSZ');
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .tech-font {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .tech-gradient {
+            background: linear-gradient(135deg, #5856D6, #AF52DE);
+        }
+        .game-container {
+            aspect-ratio: 16/9;
+            max-height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, 
+                #5856D6 0%,
+                #7857D4 25%,
+                #9A54D2 50%,
+                #AF52DE 100%
+            );
+            background-size: 400% 400%;
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .game-frame {
+            width: 100%;
+            height: 100%;
+            max-width: 600px;
+            max-height: 600px;
+            background: #fff;
+            transform: scale(0.9);
+            transform-origin: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <header class="tech-gradient shadow-lg">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="text-4xl font-bold tech-font">PokiPlayOnline</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <section class="mb-8">
+            <h1 class="text-3xl tech-font mb-4">Minesweeper - The Ultimate Logic Challenge</h1>
+            <p class="text-xl text-gray-300 mb-4">Test your deductive reasoning in this classic puzzle game! Clear the minefield using logic and careful planning. Can you identify all the mines without triggering any of them?</p>
+            <div class="text-gray-400">
+                <p class="mb-2">🧩 Classic puzzle gameplay</p>
+                <p class="mb-2">🏆 Multiple difficulty levels</p>
+                <p class="mb-2">⚡ Test your logical thinking</p>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <div class="game-container rounded-lg overflow-hidden shadow-lg">
+                <iframe 
+                    src="minesweeper/index.html"
+                    class="w-full h-full border-0 game-frame"
+                    allow="gamepad *;"
+                    loading="lazy"
+                    title="Play Minesweeper Online"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <section class="grid md:grid-cols-2 gap-8">
+            <div class="bg-gray-800 p-6 rounded-xl">
+                <h2 class="text-2xl font-semibold tech-font mb-4 text-[#FF9500]">Game Features</h2>
+                <ul class="space-y-3 text-gray-300">
+                    <li>✨ Classic Minesweeper gameplay</li>
+                    <li>🎮 Left and right click controls</li>
+                    <li>🏆 Multiple difficulty options</li>
+                    <li>🌟 Timer and mine counter</li>
+                    <li>📱 Responsive design - play on any device</li>
+                    <li>🎯 Perfect for quick gaming sessions</li>
+                </ul>
+            </div>
+
+            <div class="bg-gray-800 p-6 rounded-xl">
+                <h2 class="text-2xl font-semibold tech-font mb-4 text-[#34C759]">How to Play</h2>
+                <ul class="space-y-3 text-gray-300">
+                    <li>1. Left click to reveal a cell</li>
+                    <li>2. Right click to flag potential mines</li>
+                    <li>3. Numbers show adjacent mines</li>
+                    <li>4. Use logic to identify safe cells</li>
+                    <li>5. Flag all mines to win</li>
+                    <li>6. Choose your difficulty level</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 mt-12 border-t border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <p class="text-center text-gray-400">&copy; 2024 PokiPlayOnline. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 
