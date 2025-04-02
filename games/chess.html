@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Play Chess online for free! Experience the classic strategy game that has challenged minds for centuries. Plan your moves, develop strategies, and checkmate your opponent!">
+    <meta name="keywords" content="Chess, play Chess online, Chess game, strategy game, board game, classic games, free online games">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Play Chess Online - Classic Strategy Game | PokiPlayOnline">
+    <meta property="og:description" content="Challenge yourself with Chess! Plan your moves, develop strategies, and aim for checkmate. Play for free in your browser!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pokiplayonline.online/games/chess">
+    <title>Play Chess Online - Classic Strategy Game | PokiPlayOnline</title>
+    <link rel="canonical" href="https://pokiplayonline.online/games/chess">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XVEPP70PSZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-XVEPP70PSZ');
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .tech-font {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .tech-gradient {
+            background: linear-gradient(135deg, #5856D6, #AF52DE);
+        }
+        .game-container {
+            aspect-ratio: 16/9;
+            max-height: 96vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('../image/chess_background.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            max-width: 1548px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .game-frame {
+            width: 100%;
+            height: 100%;
+            max-width: 726px;
+            max-height: 726px;
+            background: transparent;
+            transform: scale(0.95);
+            transform-origin: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <header class="tech-gradient shadow-lg">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="text-4xl font-bold tech-font">PokiPlayOnline</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <section class="mb-8">
+            <h1 class="text-3xl tech-font mb-4">Chess - The Ultimate Strategy Game</h1>
+            <p class="text-xl text-gray-300 mb-4">Experience the timeless game of kings! Plan your moves, develop winning strategies, and outmaneuver your opponent in this classic battle of minds. Can you achieve checkmate?</p>
+            <div class="text-gray-400">
+                <p class="mb-2">🎮 Classic chess gameplay</p>
+                <p class="mb-2">🏆 Test your strategic thinking</p>
+                <p class="mb-2">⚡ Challenge yourself or play against AI</p>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <div class="game-container rounded-lg overflow-hidden shadow-lg">
+                <iframe 
+                    src="Chess-Game/index.html"
+                    class="game-frame"
+                    allow="gamepad *;"
+                    loading="lazy"
+                    title="Play Chess Online"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <section class="grid md:grid-cols-2 gap-8">
+            <div class="bg-gray-800 p-6 rounded-xl">
+                <h2 class="text-2xl font-semibold tech-font mb-4 text-[#FF9500]">Game Features</h2>
+                <ul class="space-y-3 text-gray-300">
+                    <li>✨ Classic chess rules and gameplay</li>
+                    <li>🎮 Intuitive drag-and-drop controls</li>
+                    <li>🏆 Multiple difficulty levels</li>
+                    <li>🌟 Move validation and hints</li>
+                    <li>📱 Responsive design - play on any device</li>
+                    <li>🎯 Practice against AI or friends</li>
+                </ul>
+            </div>
+
+            <div class="bg-gray-800 p-6 rounded-xl">
+                <h2 class="text-2xl font-semibold tech-font mb-4 text-[#34C759]">How to Play</h2>
+                <ul class="space-y-3 text-gray-300">
+                    <li>1. Click or tap to select a piece</li>
+                    <li>2. Click or tap destination to move</li>
+                    <li>3. Capture opponent's pieces</li>
+                    <li>4. Protect your king from check</li>
+                    <li>5. Plan ahead and develop strategy</li>
+                    <li>6. Checkmate to win the game!</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 mt-12 border-t border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <p class="text-center text-gray-400">&copy; 2024 PokiPlayOnline. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 

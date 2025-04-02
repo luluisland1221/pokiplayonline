@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Minesweeper</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"></link>
   <script src="app.js" charset="utf-8"></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
   <style>
@@ -14,13 +14,34 @@
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-        background: linear-gradient(135deg, 
-            #5856D6 0%,
-            #7857D4 25%,
-            #9A54D2 50%,
-            #AF52DE 100%
-        );
-        background-size: 400% 400%;  /* 扩大背景尺寸 */
+        background: transparent;
+    }
+    
+    .container {
+        transform: translateY(3%);  /* 下移3% */
+    }
+    
+    /* 修改文字样式 */
+    .flags-text {
+        color: #5856D6;
+        font-weight: bold;
+        font-size: 2em;
+        text-shadow: 
+            2px 2px 0 #000,
+            -2px -2px 0 #000,
+            2px -2px 0 #000,
+            -2px 2px 0 #000;  /* 锐利的阴影效果 */
+    }
+    
+    #flags-left {
+        font-size: 2em;
+        color: #5856D6;
+        font-weight: bold;
+        text-shadow: 
+            2px 2px 0 #000,
+            -2px -2px 0 #000,
+            2px -2px 0 #000,
+            -2px 2px 0 #000;  /* 锐利的阴影效果 */
     }
   </style>
 </head>
@@ -28,7 +49,7 @@
 
   <div class="container">
     <div class="grid"></div>
-    <div>Flags left: <span id='flags-left'></span></div>
+    <div><span class="flags-text">Flags left: </span><span id='flags-left'></span></div>
     <div id="result"></div>
   </div>
 

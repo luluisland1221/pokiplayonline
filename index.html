@@ -33,11 +33,21 @@
             font-family: 'Orbitron', sans-serif;
         }
         .game-card {
+            background: rgba(31, 41, 55, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
         }
         .game-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        .game-card img {
+            transition: all 0.3s ease;
+        }
+        .game-card:hover img {
+            transform: scale(1.1);
         }
         .tech-gradient {
             background: linear-gradient(135deg, #007AFF, #5856D6);
@@ -53,33 +63,11 @@
         </nav>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <section class="mb-16 text-center">
-            <h2 class="text-3xl tech-font mb-6 animate__animated animate__fadeIn">Welcome to the Future of Gaming</h2>
-            <p class="text-xl text-gray-300 max-w-3xl mx-auto animate__animated animate__fadeIn animate__delay-1s">
-                Experience our handpicked collection of classic and modern browser games. From puzzle challenges to arcade adventures, enjoy instant gaming without downloads or installations. Perfect for quick breaks or extended gaming sessions!
-            </p>
-        </section>
-
-        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" aria-label="Game Collection">
-            <!-- Flappy Bird -->
-            <a href="games/flappy-bird.html" class="game-card bg-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300">
-                <div class="w-full h-48 overflow-hidden">
-                    <img 
-                        src="image/Flappy_Bird.png" 
-                        alt="Flappy Bird Game"
-                        class="w-full h-full object-cover object-center"
-                        loading="lazy"
-                    >
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2 tech-font">Flappy Bird</h3>
-                    <p class="text-gray-400">Master the art of precision in this addictive arcade challenge!</p>
-                </div>
-            </a>
-
-            <!-- 2048 -->
-            <a href="games/2048.html" class="game-card bg-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300">
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <h1 class="text-4xl font-bold tech-font text-center mb-8">Brain Training Games</h1>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <!-- 第一行 -->
+            <a href="games/2048.html" class="game-card bg-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                 <div class="w-full h-48 overflow-hidden">
                     <img 
                         src="image/2048.png" 
@@ -88,30 +76,19 @@
                         loading="lazy"
                     >
                 </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2 tech-font">2048</h3>
-                    <p class="text-gray-400">Merge tiles and test your strategic thinking skills!</p>
+                <div class="p-4">
+                    <h3 class="text-xl font-bold tech-font mb-2">2048</h3>
+                    <div class="flex items-center mb-2">
+                        <span class="text-sm text-gray-400">Level of Difficulty:</span>
+                        <div class="flex ml-2">
+                            <span class="text-yellow-400">★★★</span><span class="text-gray-600">★★</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm">Merge tiles and test your strategic thinking!</p>
                 </div>
             </a>
 
-            <!-- Snake -->
-            <a href="games/snake.html" class="game-card bg-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300">
-                <div class="w-full h-48 overflow-hidden">
-                    <img 
-                        src="image/snake.png" 
-                        alt="Snake Game"
-                        class="w-full h-full object-cover object-center"
-                        loading="lazy"
-                    >
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2 tech-font">Snake</h3>
-                    <p class="text-gray-400">Guide your snake to victory in this timeless classic!</p>
-                </div>
-            </a>
-
-            <!-- Tetris -->
-            <a href="games/tetris.html" class="game-card bg-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300">
+            <a href="games/tetris.html" class="game-card bg-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                 <div class="w-full h-48 overflow-hidden">
                     <img 
                         src="image/tetris.png" 
@@ -120,14 +97,40 @@
                         loading="lazy"
                     >
                 </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2 tech-font">Tetris</h3>
-                    <p class="text-gray-400">Stack blocks and clear lines in this timeless puzzle!</p>
+                <div class="p-4">
+                    <h3 class="text-xl font-bold tech-font mb-2">Tetris</h3>
+                    <div class="flex items-center mb-2">
+                        <span class="text-sm text-gray-400">Level of Difficulty:</span>
+                        <div class="flex ml-2">
+                            <span class="text-yellow-400">★★★</span><span class="text-gray-600">★★</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm">Stack blocks and clear lines in this timeless puzzle!</p>
                 </div>
             </a>
 
-            <!-- Pacman -->
-            <a href="games/pacman.html" class="game-card bg-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300">
+            <a href="games/snake.html" class="game-card bg-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                <div class="w-full h-48 overflow-hidden">
+                    <img 
+                        src="image/snake.png" 
+                        alt="Snake Game"
+                        class="w-full h-full object-cover object-center"
+                        loading="lazy"
+                    >
+                </div>
+                <div class="p-4">
+                    <h3 class="text-xl font-bold tech-font mb-2">Snake</h3>
+                    <div class="flex items-center mb-2">
+                        <span class="text-sm text-gray-400">Level of Difficulty:</span>
+                        <div class="flex ml-2">
+                            <span class="text-yellow-400">★★★</span><span class="text-gray-600">★★</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm">Guide your snake to victory in this timeless classic!</p>
+                </div>
+            </a>
+
+            <a href="games/pacman.html" class="game-card bg-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                 <div class="w-full h-48 overflow-hidden">
                     <img 
                         src="image/pacman.png" 
@@ -136,14 +139,41 @@
                         loading="lazy"
                     >
                 </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2 tech-font">Pacman</h3>
-                    <p class="text-gray-400">Chase dots and avoid ghosts in this arcade legend!</p>
+                <div class="p-4">
+                    <h3 class="text-xl font-bold tech-font mb-2">Pacman</h3>
+                    <div class="flex items-center mb-2">
+                        <span class="text-sm text-gray-400">Level of Difficulty:</span>
+                        <div class="flex ml-2">
+                            <span class="text-yellow-400">★★★★</span><span class="text-gray-600">★</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm">Chase dots and avoid ghosts in this arcade legend!</p>
                 </div>
             </a>
 
-            <!-- Breakout -->
-            <a href="games/breakout.html" class="game-card bg-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300">
+            <!-- 第二行 -->
+            <a href="games/flappy-bird.html" class="game-card bg-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                <div class="w-full h-48 overflow-hidden">
+                    <img 
+                        src="image/Flappy_Bird.png" 
+                        alt="Flappy Bird Game"
+                        class="w-full h-full object-cover object-center"
+                        loading="lazy"
+                    >
+                </div>
+                <div class="p-4">
+                    <h3 class="text-xl font-bold tech-font mb-2">Flappy Bird</h3>
+                    <div class="flex items-center mb-2">
+                        <span class="text-sm text-gray-400">Level of Difficulty:</span>
+                        <div class="flex ml-2">
+                            <span class="text-yellow-400">★★★★★</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm">Master the art of precision in this addictive arcade challenge!</p>
+                </div>
+            </a>
+
+            <a href="games/breakout.html" class="game-card bg-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                 <div class="w-full h-48 overflow-hidden">
                     <img 
                         src="image/breakout.png" 
@@ -152,14 +182,19 @@
                         loading="lazy"
                     >
                 </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2 tech-font">Breakout</h3>
-                    <p class="text-gray-400">Break blocks and set high scores in this classic!</p>
+                <div class="p-4">
+                    <h3 class="text-xl font-bold tech-font mb-2">Breakout</h3>
+                    <div class="flex items-center mb-2">
+                        <span class="text-sm text-gray-400">Level of Difficulty:</span>
+                        <div class="flex ml-2">
+                            <span class="text-yellow-400">★★★★</span><span class="text-gray-600">★</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm">Break blocks and set high scores in this classic!</p>
                 </div>
             </a>
 
-            <!-- Minesweeper -->
-            <a href="games/minesweeper.html" class="game-card bg-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300">
+            <a href="games/minesweeper.html" class="game-card bg-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                 <div class="w-full h-48 overflow-hidden">
                     <img 
                         src="image/minesweeper.png" 
@@ -168,14 +203,19 @@
                         loading="lazy"
                     >
                 </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2 tech-font">Minesweeper</h3>
-                    <p class="text-gray-400">Use logic to clear the minefield safely!</p>
+                <div class="p-4">
+                    <h3 class="text-xl font-bold tech-font mb-2">Minesweeper</h3>
+                    <div class="flex items-center mb-2">
+                        <span class="text-sm text-gray-400">Level of Difficulty:</span>
+                        <div class="flex ml-2">
+                            <span class="text-yellow-400">★★★</span><span class="text-gray-600">★★</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm">Use logic to clear the minefield safely!</p>
                 </div>
             </a>
 
-            <!-- Chess -->
-            <a href="games/chess.html" class="game-card bg-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300">
+            <a href="games/chess.html" class="game-card bg-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                 <div class="w-full h-48 overflow-hidden">
                     <img 
                         src="image/chess.png" 
@@ -184,28 +224,18 @@
                         loading="lazy"
                     >
                 </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2 tech-font">Chess</h3>
-                    <p class="text-gray-400">Plan your moves in this timeless strategy game!</p>
+                <div class="p-4">
+                    <h3 class="text-xl font-bold tech-font mb-2">Chess</h3>
+                    <div class="flex items-center mb-2">
+                        <span class="text-sm text-gray-400">Level of Difficulty:</span>
+                        <div class="flex ml-2">
+                            <span class="text-yellow-400">★★★</span><span class="text-gray-600">★★</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm">Plan your moves in this timeless strategy game!</p>
                 </div>
             </a>
-
-            <!-- Racing -->
-            <a href="games/racing.html" class="game-card bg-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300">
-                <div class="w-full h-48 overflow-hidden">
-                    <img 
-                        src="image/racing.png" 
-                        alt="Racing Game"
-                        class="w-full h-full object-cover object-center"
-                        loading="lazy"
-                    >
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2 tech-font">Racing</h3>
-                    <p class="text-gray-400">Experience thrilling high-speed racing action!</p>
-                </div>
-            </a>
-        </section>
+        </div>
 
         <section class="mt-16 bg-gray-800 rounded-xl p-8">
             <h2 class="text-2xl tech-font mb-6">Why Choose PokiPlayOnline?</h2>
