@@ -65,175 +65,38 @@
 
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <h1 class="text-4xl font-bold tech-font text-center mb-8">Brain Training Games</h1>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <!-- 第一行 -->
-            <a href="games/2048.html" class="game-card bg-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                <div class="w-full h-48 overflow-hidden">
-                    <img 
-                        src="image/2048.png" 
-                        alt="2048 Game"
-                        class="w-full h-full object-cover object-center"
-                        loading="lazy"
-                    >
-                </div>
-                <div class="p-4">
-                    <h3 class="text-xl font-bold tech-font mb-2">2048</h3>
-                    <div class="flex items-center mb-2">
-                        <span class="text-sm text-gray-400">Level of Difficulty:</span>
-                        <div class="flex ml-2">
-                            <span class="text-yellow-400">★★★</span><span class="text-gray-600">★★</span>
-                        </div>
-                    </div>
-                    <p class="text-gray-400 text-sm">Merge tiles and test your strategic thinking!</p>
-                </div>
+        <div class="game-grid max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <!-- 大尺寸游戏卡片 -->
+            <a href="games/2048.html" class="game-card large">
+                <img src="image/2048.png" alt="2048" class="w-full h-full object-cover rounded-xl hover:scale-105 transition-transform duration-300">
             </a>
-
-            <a href="games/tetris.html" class="game-card bg-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                <div class="w-full h-48 overflow-hidden">
-                    <img 
-                        src="image/tetris.png" 
-                        alt="Tetris Game"
-                        class="w-full h-full object-cover object-center"
-                        loading="lazy"
-                    >
-                </div>
-                <div class="p-4">
-                    <h3 class="text-xl font-bold tech-font mb-2">Tetris</h3>
-                    <div class="flex items-center mb-2">
-                        <span class="text-sm text-gray-400">Level of Difficulty:</span>
-                        <div class="flex ml-2">
-                            <span class="text-yellow-400">★★★</span><span class="text-gray-600">★★</span>
-                        </div>
-                    </div>
-                    <p class="text-gray-400 text-sm">Stack blocks and clear lines in this timeless puzzle!</p>
-                </div>
+            
+            <a href="games/tetris.html" class="game-card medium">
+                <img src="image/Tetris.png" alt="Tetris" class="w-full h-full object-cover rounded-xl hover:scale-105 transition-transform duration-300">
             </a>
-
-            <a href="games/snake.html" class="game-card bg-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                <div class="w-full h-48 overflow-hidden">
-                    <img 
-                        src="image/snake.png" 
-                        alt="Snake Game"
-                        class="w-full h-full object-cover object-center"
-                        loading="lazy"
-                    >
-                </div>
-                <div class="p-4">
-                    <h3 class="text-xl font-bold tech-font mb-2">Snake</h3>
-                    <div class="flex items-center mb-2">
-                        <span class="text-sm text-gray-400">Level of Difficulty:</span>
-                        <div class="flex ml-2">
-                            <span class="text-yellow-400">★★★</span><span class="text-gray-600">★★</span>
-                        </div>
-                    </div>
-                    <p class="text-gray-400 text-sm">Guide your snake to victory in this timeless classic!</p>
-                </div>
+            
+            <a href="games/snake.html" class="game-card small">
+                <img src="image/snake.png" alt="Snake" class="w-full h-full object-cover rounded-xl hover:scale-105 transition-transform duration-300">
             </a>
-
-            <a href="games/pacman.html" class="game-card bg-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                <div class="w-full h-48 overflow-hidden">
-                    <img 
-                        src="image/pacman.png" 
-                        alt="Pacman Game"
-                        class="w-full h-full object-cover object-center"
-                        loading="lazy"
-                    >
-                </div>
-                <div class="p-4">
-                    <h3 class="text-xl font-bold tech-font mb-2">Pacman</h3>
-                    <div class="flex items-center mb-2">
-                        <span class="text-sm text-gray-400">Level of Difficulty:</span>
-                        <div class="flex ml-2">
-                            <span class="text-yellow-400">★★★★</span><span class="text-gray-600">★</span>
-                        </div>
-                    </div>
-                    <p class="text-gray-400 text-sm">Chase dots and avoid ghosts in this arcade legend!</p>
-                </div>
+            
+            <a href="games/pacman.html" class="game-card medium">
+                <img src="image/pacman.png" alt="Pacman" class="w-full h-full object-cover rounded-xl hover:scale-105 transition-transform duration-300">
             </a>
-
-            <!-- 第二行 -->
-            <a href="games/flappy-bird.html" class="game-card bg-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                <div class="w-full h-48 overflow-hidden">
-                    <img 
-                        src="image/Flappy_Bird.png" 
-                        alt="Flappy Bird Game"
-                        class="w-full h-full object-cover object-center"
-                        loading="lazy"
-                    >
-                </div>
-                <div class="p-4">
-                    <h3 class="text-xl font-bold tech-font mb-2">Flappy Bird</h3>
-                    <div class="flex items-center mb-2">
-                        <span class="text-sm text-gray-400">Level of Difficulty:</span>
-                        <div class="flex ml-2">
-                            <span class="text-yellow-400">★★★★★</span>
-                        </div>
-                    </div>
-                    <p class="text-gray-400 text-sm">Master the art of precision in this addictive arcade challenge!</p>
-                </div>
+            
+            <a href="games/flappy-bird.html" class="game-card large">
+                <img src="image/Flappy_Bird.png" alt="Flappy Bird" class="w-full h-full object-cover rounded-xl hover:scale-105 transition-transform duration-300">
             </a>
-
-            <a href="games/breakout.html" class="game-card bg-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                <div class="w-full h-48 overflow-hidden">
-                    <img 
-                        src="image/breakout.png" 
-                        alt="Breakout Game"
-                        class="w-full h-full object-cover object-center"
-                        loading="lazy"
-                    >
-                </div>
-                <div class="p-4">
-                    <h3 class="text-xl font-bold tech-font mb-2">Breakout</h3>
-                    <div class="flex items-center mb-2">
-                        <span class="text-sm text-gray-400">Level of Difficulty:</span>
-                        <div class="flex ml-2">
-                            <span class="text-yellow-400">★★★★</span><span class="text-gray-600">★</span>
-                        </div>
-                    </div>
-                    <p class="text-gray-400 text-sm">Break blocks and set high scores in this classic!</p>
-                </div>
+            
+            <a href="games/breakout.html" class="game-card small">
+                <img src="image/Breakout.png" alt="Breakout" class="w-full h-full object-cover rounded-xl hover:scale-105 transition-transform duration-300">
             </a>
-
-            <a href="games/minesweeper.html" class="game-card bg-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                <div class="w-full h-48 overflow-hidden">
-                    <img 
-                        src="image/minesweeper.png" 
-                        alt="Minesweeper Game"
-                        class="w-full h-full object-cover object-center"
-                        loading="lazy"
-                    >
-                </div>
-                <div class="p-4">
-                    <h3 class="text-xl font-bold tech-font mb-2">Minesweeper</h3>
-                    <div class="flex items-center mb-2">
-                        <span class="text-sm text-gray-400">Level of Difficulty:</span>
-                        <div class="flex ml-2">
-                            <span class="text-yellow-400">★★★</span><span class="text-gray-600">★★</span>
-                        </div>
-                    </div>
-                    <p class="text-gray-400 text-sm">Use logic to clear the minefield safely!</p>
-                </div>
+            
+            <a href="games/minesweeper.html" class="game-card medium">
+                <img src="image/Minesweeper.png" alt="Minesweeper" class="w-full h-full object-cover rounded-xl hover:scale-105 transition-transform duration-300">
             </a>
-
-            <a href="games/chess.html" class="game-card bg-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                <div class="w-full h-48 overflow-hidden">
-                    <img 
-                        src="image/chess.png" 
-                        alt="Chess Game"
-                        class="w-full h-full object-cover object-center"
-                        loading="lazy"
-                    >
-                </div>
-                <div class="p-4">
-                    <h3 class="text-xl font-bold tech-font mb-2">Chess</h3>
-                    <div class="flex items-center mb-2">
-                        <span class="text-sm text-gray-400">Level of Difficulty:</span>
-                        <div class="flex ml-2">
-                            <span class="text-yellow-400">★★★</span><span class="text-gray-600">★★</span>
-                        </div>
-                    </div>
-                    <p class="text-gray-400 text-sm">Plan your moves in this timeless strategy game!</p>
-                </div>
+            
+            <a href="games/chess.html" class="game-card large">
+                <img src="image/chess.png" alt="Chess" class="w-full h-full object-cover rounded-xl hover:scale-105 transition-transform duration-300">
             </a>
         </div>
 
