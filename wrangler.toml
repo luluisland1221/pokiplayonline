@@ -7,11 +7,13 @@ workers_dev = false
 [site]
 bucket = "."
 include = ["**/*"]
-exclude = [".git/**", ".github/**"]
+exclude = [".git/**"]
 
 [build]
 command = ""
-upload.format = "directory"
+
+[build.upload]
+format = "directory"
 
 [env.production]
 workers_dev = false 
