@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Image Loading Test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .test-section {
+      margin-bottom: 30px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    h1 {
+      color: #333;
+    }
+    h2 {
+      color: #666;
+    }
+    img {
+      border: 1px solid #ccc;
+      margin: 10px;
+      max-width: 200px;
+    }
+    .failed {
+      border: 2px solid red;
+    }
+    .success {
+      border: 2px solid green;
+    }
+  </style>
+</head>
+<body>
+  <h1>Image Loading Test Page</h1>
+  <p>This page tests different ways of loading images to diagnose issues.</p>
+  
+  <div class="test-section">
+    <h2>1. Relative Paths</h2>
+    <p>Using relative paths from current directory:</p>
+    <img src="image/2048.png" alt="2048 (relative)" title="image/2048.png">
+    <img src="image/Tetris.png" alt="Tetris (relative)" title="image/Tetris.png">
+    <img src="image/snake.png" alt="Snake (relative)" title="image/snake.png">
+  </div>
+  
+  <div class="test-section">
+    <h2>2. Absolute Paths</h2>
+    <p>Using absolute paths from root:</p>
+    <img src="/image/2048.png" alt="2048 (absolute)" title="/image/2048.png">
+    <img src="/image/Tetris.png" alt="Tetris (absolute)" title="/image/Tetris.png">
+    <img src="/image/snake.png" alt="Snake (absolute)" title="/image/snake.png">
+  </div>
+  
+  <div class="test-section">
+    <h2>3. Different Folder Structure</h2>
+    <p>Testing different folder notations:</p>
+    <img src="./image/2048.png" alt="2048 (./)" title="./image/2048.png">
+    <img src="../image/2048.png" alt="2048 (../)" title="../image/2048.png">
+  </div>
+  
+  <div class="test-section">
+    <h2>4. Full URLs</h2>
+    <p>Using complete URLs:</p>
+    <img src="https://pokiplayonline.pages.dev/image/2048.png" alt="2048 (full URL)" title="https://pokiplayonline.pages.dev/image/2048.png">
+    <img src="https://pokiplayonline.pages.dev/image/Tetris.png" alt="Tetris (full URL)" title="https://pokiplayonline.pages.dev/image/Tetris.png">
+  </div>
+  
+  <div class="test-section">
+    <h2>5. Case Sensitivity Test</h2>
+    <p>Testing lowercase filenames:</p>
+    <img src="image/tetris.png" alt="tetris (lowercase)" title="image/tetris.png">
+    <img src="/image/tetris.png" alt="tetris (lowercase absolute)" title="/image/tetris.png">
+  </div>
+
+  <script>
+    // Add visual feedback for loaded/failed images
+    document.querySelectorAll('img').forEach(img => {
+      img.onload = function() {
+        this.classList.add('success');
+        this.insertAdjacentHTML('afterend', '<p>✅ Loaded</p>');
+      };
+      img.onerror = function() {
+        this.classList.add('failed');
+        this.insertAdjacentHTML('afterend', '<p>❌ Failed to load</p>');
+      };
+    });
+  </script>
+</body>
+</html> 
