@@ -1,5 +1,17 @@
 name = "pokiplayonline"
 compatibility_date = "2024-04-03"
 
+# 禁用 Workers 功能
+workers_dev = false
+
 [site]
-bucket = "/" 
+bucket = "."
+include = ["**/*"]
+exclude = [".git/**", ".github/**"]
+
+[build]
+command = ""
+upload.format = "directory"
+
+[env.production]
+workers_dev = false 
