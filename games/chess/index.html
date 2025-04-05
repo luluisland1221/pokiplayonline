@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
     <title>Chess</title>
-    <link rel="stylesheet" href="./css/chessboard-1.0.0.min.css">
     <style>
         body {
             margin: 0;
@@ -13,41 +11,35 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background: transparent;
+            background: transparent;  /* 删除背景，改为透明 */
         }
         
         .container {
             margin: 0 auto;
             max-width: 100%;
             padding: 1rem;
-            transform: scale(0.95);
+            transform: scale(0.95);  /* 稍微缩小棋盘 */
             transform-origin: center;
         }
         
+        /* 删除标题相关样式 */
+        
         .board {
+            width: 640px;
+            height: 640px;
             margin: 0 auto;
         }
-        
-        .buttons {
-            margin-top: 1rem;
-            text-align: center;
-        }
     </style>
+    <link rel="stylesheet" href="css/chessboard.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/chess.js"></script>
+    <script src="js/chessboard.js"></script>
 </head>
 <body>
     <div class="container">
-        <div class="board" id="board"></div>
-        <div class="buttons">
-            <button class="play-again">Play Again</button>
-            <button class="set-pos">Set position</button>
-            <button class="flip-board">Flip board</button>
-        </div>
-        <div id="move-history" class="move-history"></div>
+        <!-- 删除 CHESS GAME 标题 -->
+        <div id="board" class="board"></div>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="./js/chessboard-1.0.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
-    <script src="./script.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
