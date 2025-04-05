@@ -10,9 +10,11 @@
     <meta property="og:description" content="Challenge yourself with Chess! Plan your moves, develop strategies, and aim for checkmate. Play for free in your browser!">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pokiplayonline.online/games/chess">
-    <title>Play Chess Online - Classic Strategy Game | PokiPlayOnline</title>
+    <title>Chess - PokiPlayOnline</title>
     <link rel="canonical" href="https://pokiplayonline.online/games/chess">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard-1.0.0.min.css">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XVEPP70PSZ"></script>
     <script>
@@ -31,31 +33,16 @@
             font-family: 'Orbitron', sans-serif;
         }
         .tech-gradient {
-            background: linear-gradient(135deg, #5856D6, #AF52DE);
+            background: linear-gradient(135deg, #007AFF, #5856D6);
         }
         .game-container {
-            aspect-ratio: 16/9;
-            max-height: 96vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: url('../image/chess_background.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            width: 100%;
-            max-width: 1548px;
-            margin: 0 auto;
-            overflow: hidden;
+            height: 80vh;
+            max-height: 800px;
         }
-        .game-frame {
+        #board {
             width: 100%;
-            height: 100%;
-            max-width: 726px;
-            max-height: 726px;
-            background: transparent;
-            transform: scale(0.95);
-            transform-origin: center;
+            max-width: 600px;
+            margin: 0 auto;
         }
     </style>
 </head>
@@ -80,21 +67,19 @@
         </section>
 
         <section class="mb-12">
-            <div class="game-container rounded-lg overflow-hidden shadow-lg">
-                <iframe 
-                    src="chess/index.html"
-                    class="game-frame"
-                    allow="gamepad *;"
-                    loading="lazy"
-                    title="Play Chess Online"
-                    allowfullscreen>
-                </iframe>
+            <div class="game-container bg-gray-800 rounded-lg overflow-hidden shadow-lg p-6">
+                <div id="board"></div>
+                <div class="flex justify-center mt-4">
+                    <button id="playAgain" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded mx-2">Play Again</button>
+                    <button id="setPos" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded mx-2">Set Position</button>
+                    <button id="flipBoard" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded mx-2">Flip Board</button>
+                </div>
             </div>
         </section>
 
         <section class="grid md:grid-cols-2 gap-8">
             <div class="bg-gray-800 p-6 rounded-xl">
-                <h2 class="text-2xl font-semibold tech-font mb-4 text-[#FF9500]">Game Features</h2>
+                <h2 class="text-2xl font-semibold tech-font mb-4 text-[#34C759]">Game Features</h2>
                 <ul class="space-y-3 text-gray-300">
                     <li>✨ Classic chess rules and gameplay</li>
                     <li>🎮 Intuitive drag-and-drop controls</li>
@@ -104,7 +89,7 @@
                     <li>🎯 Practice against AI or friends</li>
                 </ul>
             </div>
-
+            
             <div class="bg-gray-800 p-6 rounded-xl">
                 <h2 class="text-2xl font-semibold tech-font mb-4 text-[#34C759]">How to Play</h2>
                 <ul class="space-y-3 text-gray-300">
@@ -124,5 +109,85 @@
             <p class="text-center text-gray-400">&copy; 2024 PokiPlayOnline. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard-1.0.0.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let board = null;
+            const game = new Chess();
+            
+            const onDragStart = (source, piece, position, orientation) => {
+                if (game.game_over()) return false;
+                if (piece.search(/^b/) !== -1) return false;
+            };
+            
+            const onDrop = (source, target) => {
+                const move = game.move({
+                    from: source,
+                    to: target,
+                    promotion: 'q',
+                });
+                
+                if (move === null) return 'snapback';
+                
+                window.setTimeout(makeRandomMove, 250);
+            };
+            
+            const onSnapEnd = () => {
+                board.position(game.fen());
+            };
+            
+            const makeRandomMove = () => {
+                const possibleMoves = game.moves();
+                
+                if (game.game_over()) {
+                    alert("Checkmate!");
+                } else {
+                    const randomIdx = Math.floor(Math.random() * possibleMoves.length);
+                    const move = possibleMoves[randomIdx];
+                    game.move(move);
+                    board.position(game.fen());
+                }
+            };
+            
+            const boardConfig = {
+                showNotation: true,
+                draggable: true,
+                position: 'start',
+                onDragStart,
+                onDrop,
+                onSnapEnd,
+                moveSpeed: 'fast',
+                snapBackSpeed: 500,
+                snapSpeed: 100,
+                pieceTheme: 'https://chessboardjs.com/img/chesspieces/wikipedia/{piece}.png'
+            };
+            
+            board = Chessboard('board', boardConfig);
+            
+            document.getElementById('playAgain').addEventListener('click', () => {
+                game.reset();
+                board.start();
+            });
+            
+            document.getElementById('setPos').addEventListener('click', () => {
+                const fen = prompt("Enter the FEN notation for the desired position!");
+                if (fen !== null) {
+                    if (game.load(fen)) {
+                        board.position(fen);
+                    } else {
+                        alert("Invalid FEN notation. Please try again.");
+                    }
+                }
+            });
+            
+            document.getElementById('flipBoard').addEventListener('click', () => {
+                board.flip();
+                makeRandomMove();
+            });
+        });
+    </script>
 </body>
 </html> 
