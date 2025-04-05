@@ -3,14 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHESS_GAME</title>
+    <title>Chess</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/chessboard-1.0.0.min.css">
-    <link rel="icon" href="icon/chess board.png" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: transparent;
+        }
+        
+        .container {
+            margin: 0 auto;
+            max-width: 100%;
+            padding: 1rem;
+            transform: scale(0.95);
+            transform-origin: center;
+        }
+        
+        .board {
+            margin: 0 auto;
+        }
+        
+        .buttons {
+            margin-top: 1rem;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1>CHESS GAME</h1>
         <div class="board" id="board"></div>
         <div class="buttons">
             <button class="play-again">Play Again</button>
@@ -20,36 +46,9 @@
         <div id="move-history" class="move-history"></div>
     </div>
 
-    <!-- 使用 CDN 链接确保可用性 -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
-    <!-- 本地资源 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/chessboard-1.0.0.min.js"></script>
-    <script>
-        // 添加调试代码
-        window.addEventListener('load', function() {
-            console.log('Page loaded');
-            if (typeof Chessboard === 'undefined') {
-                console.error('Chessboard is not defined');
-            } else {
-                console.log('Chessboard is loaded');
-            }
-            
-            // 尝试初始化棋盘
-            try {
-                var board = Chessboard('board', {
-                    position: 'start',
-                    pieceTheme: 'img/chesspieces/wikipedia/{piece}.png'
-                });
-                console.log('Board initialized');
-            } catch (e) {
-                console.error('Error initializing board:', e);
-            }
-        });
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
     <script src="script.js"></script>
-    <!--
-    FEN string:rnbqkb1r/ppp1pppp/5n2/3p4/3P4/8/PPP2PPP/RNBQKBNR w KQkq - 0 4
-    -->
 </body>
 </html>
