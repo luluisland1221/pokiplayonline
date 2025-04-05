@@ -30,9 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Function to handle the start of a drag position
-    const onDragStart = (source, piece, position, orientation) => {
-        if (game.game_over()) return false;
-        if (piece.search(/^b/) !== -1) return false;
+    const onDragStart = (source, piece) => {
+        // Allow the user to drag only their own pieces based on color
+        return !game.game_over() && piece.search(userColor) === 0;
     };
 
     // Function to handle a piece drop on the board
